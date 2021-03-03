@@ -18,3 +18,8 @@
 
 PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/omni_a52q.mk
+     
+COMMON_LUNCH_CHOICES := \
+    omni_a52q-user \
+    omni_a52q-userdebug \
+    omni_a52q-eng
