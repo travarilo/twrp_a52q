@@ -15,6 +15,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+PLATFORM_VERSION := 11
 
 DEVICE_PATH := device/samsung/a52q
 
@@ -88,7 +89,8 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_BOARD_PLATFORM := atoll
 
 # Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+RECOVERY_SDCARD_ON_DATA := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -101,3 +103,11 @@ TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
+TW_MAX_BRIGHTNESS := 365
+TW_DEFAULT_BRIGHTNESS := 219
+TW_Y_OFFSET := 142
+TW_H_OFFSET := -142
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
