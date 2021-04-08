@@ -97,6 +97,7 @@ TARGET_BOARD_PLATFORM := atoll
 # Recovery
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -117,3 +118,6 @@ TW_H_OFFSET := -142
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone17/temp
